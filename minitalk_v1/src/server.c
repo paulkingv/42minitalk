@@ -6,7 +6,7 @@
 /*   By: pking <pking@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/27 13:52:17 by pking             #+#    #+#             */
-/*   Updated: 2026/05/06 15:32:03 by pking            ###   ########.fr       */
+/*   Updated: 2026/05/06 17:01:11 by pking            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,6 @@ void    handler(int signal)
 {
     static  char c;
     static  int bit;
-
-    c = 0;
-    bit = 0;
 
     if (signal == SIGUSR1)
         c = c | (0x01 << bit);

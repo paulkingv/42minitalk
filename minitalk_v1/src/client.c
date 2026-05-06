@@ -6,7 +6,7 @@
 /*   By: pking <pking@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/27 13:52:12 by pking             #+#    #+#             */
-/*   Updated: 2026/05/04 14:45:49 by pking            ###   ########.fr       */
+/*   Updated: 2026/05/06 17:01:32 by pking            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ int	main(int argc, char **argv)
 			ft_printf("Integer PID too large or small");
 			return (1);
 		}
-		while (argv [2][i++] != '\0')
+		while (argv [2][i] != '\0')
 		{
 			encoder(pid, argv[2][i]);
 			i++;

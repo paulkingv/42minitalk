@@ -6,7 +6,7 @@
 /*   By: pking <pking@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/06 19:30:43 by pking             #+#    #+#             */
-/*   Updated: 2026/02/07 21:53:19 by pking            ###   ########.fr       */
+/*   Updated: 2026/05/06 15:30:34 by pking            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <stddef.h>
 # include <unistd.h>
 
-int		ft_putchar_fd(char c, int fd);
+int		ft_putchar_fd_int(char c, int fd);
 int		ft_putstr(char *s);
 int		ft_putnbr(int nb);
 int		conversion(va_list args, const char format);

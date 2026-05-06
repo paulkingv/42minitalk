@@ -6,7 +6,7 @@
 /*   By: pking <pking@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 14:22:36 by pking             #+#    #+#             */
-/*   Updated: 2026/02/07 21:41:49 by pking            ###   ########.fr       */
+/*   Updated: 2026/05/06 15:29:59 by pking            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	ft_putnbr_base(unsigned int nb, char *base)
 	}
 	else
 	{
-		ft_putchar_fd(base[nb], 1);
+		ft_putchar_fd_int(base[nb], 1);
 		count++;
 	}
 	return (count);

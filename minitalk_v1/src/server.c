@@ -6,7 +6,7 @@
 /*   By: pking <pking@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/27 13:52:17 by pking             #+#    #+#             */
-/*   Updated: 2026/05/03 21:33:32 by pking            ###   ########.fr       */
+/*   Updated: 2026/05/06 15:32:03 by pking            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,13 +35,8 @@ void    handler(int signal)
     bit = 0;
     }
 }
-int main (int argc, char **argv)
+int main (void)
 {
-    if (argc != 1)
-    {
-        ft_printf("Error: Argument Count != 1");
-        return (1);
-    }
     ft_printf("PID: %d\n", getpid());
     signal(SIGUSR1, handler);
     signal(SIGUSR2, handler);

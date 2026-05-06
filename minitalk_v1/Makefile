@@ -1,28 +1,41 @@
-CC = cc
-CFLAGS = -Wall -Wextra -Werror -I inc
+CC      = cc
+CFLAGS  = -Wall -Wextra -Werror -I inc -I inc/libft -I inc/printf/src
 
-FILES = 
+LIBFT_DIR   = inc/libft
+PRINTF_DIR  = inc/printf/src
 
-SERVER = server
-CLIENT = client
+LIBFT       = $(LIBFT_DIR)/libft.a
+PRINTF      = $(PRINTF_DIR)/libftprintf.a
 
-SRC_S = src/server.c
-SRC_C = src/client.c
-HEADER = inc/minitalk.h
+SERVER  = server
+CLIENT  = client
 
-all: $(SERVER) $(CLIENT)
+SRC_S   = src/server.c
+SRC_C   = src/client.c
+HEADER  = inc/minitalk.h
 
-$(SERVER): $(SRC_S)
-		$(CC) $(CFLAGS) -o $(SERVER) $(SRC_S)
+all: $(LIBFT) $(PRINTF) $(SERVER) $(CLIENT)
 
-$(CLIENT): $(SRC_C)
-		$(CC) $(CFLAGS) -o $(CLIENT) $(SRC_C)
+$(LIBFT):
+	make -C $(LIBFT_DIR)
+
+$(PRINTF):
+	make -C $(PRINTF_DIR)
+
+$(SERVER): $(SRC_S) $(HEADER) $(LIBFT) $(PRINTF)
+	$(CC) $(CFLAGS) -o $(SERVER) $(SRC_S) $(LIBFT) $(PRINTF)
+
+$(CLIENT): $(SRC_C) $(HEADER) $(LIBFT) $(PRINTF)
+	$(CC) $(CFLAGS) -o $(CLIENT) $(SRC_C) $(LIBFT) $(PRINTF)
 
 clean:
-		@echo "No .o Files"
+	make -C $(LIBFT_DIR) clean
+	make -C $(PRINTF_DIR) clean
 
 fclean: clean
-		$(RM) $(SERVER) $(CLIENT)
+	make -C $(LIBFT_DIR) fclean
+	make -C $(PRINTF_DIR) fclean
+	$(RM) $(SERVER) $(CLIENT)
 
 re: fclean all
 

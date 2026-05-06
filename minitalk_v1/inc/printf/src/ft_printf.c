@@ -6,7 +6,7 @@
 /*   By: pking <pking@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 19:51:00 by pking             #+#    #+#             */
-/*   Updated: 2026/02/07 21:19:36 by pking            ###   ########.fr       */
+/*   Updated: 2026/05/06 16:16:06 by pking            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	conversion(va_list args, const char f)
 	
 	count = 0;
 	if ((f) == 'c')
-		count += ft_putchar_fd(va_arg(args, int), 1);
+		count += ft_putchar_fd_int(va_arg(args, int), 1);
 	else if ((f) == 's')
 		count += ft_putstr(va_arg(args, char *));
 	else if ((f) == 'p')
@@ -32,7 +32,7 @@ int	conversion(va_list args, const char f)
 	else if ((f) == 'X')
 		count += ft_putnbr_base(va_arg(args, unsigned int), "0123456789ABCDEF");
 	else if ((f) == '%')
-		count += ft_putchar_fd('%', 1);
+		count += ft_putchar_fd_int('%', 1);
 	else
 		return(0);
 	return (count);
@@ -55,7 +55,7 @@ int	ft_printf(const char *f, ...)
             i++;
         }
         else
-            printed_count += ft_putchar_fd(f[i], 1);
+            printed_count += ft_putchar_fd_int(f[i], 1);
         i++;
     }
     va_end(args);

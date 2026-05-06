@@ -1,7 +1,7 @@
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
-FILES = ft_putchar_fd.c   ft_putnbr.c ft_putstr.c\
+FILES = ft_putchar_fd_int.c   ft_putnbr.c ft_putstr.c\
 ft_printf.c  ft_putnbr_base.c ft_putpointer.c ft_strlen.c
 
 NAME = libftprintf.a

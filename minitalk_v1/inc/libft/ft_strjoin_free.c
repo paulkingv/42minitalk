@@ -6,7 +6,7 @@
 /*   By: pking <pking@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 14:40:30 by pking             #+#    #+#             */
-/*   Updated: 2026/05/06 15:54:51 by pking            ###   ########.fr       */
+/*   Updated: 2026/05/07 18:08:53 by pking            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ char	*ft_strjoin_free(char const *s1, char const *s2, int free_s1, int free_s2)
 	int		i;
 	int		j;
 	char	*concat_string;
-
 	i = 0;
 	j = 0;
+	
 	concat_string = ft_calloc((ft_strlen(s1) + ft_strlen(s2) + 1), sizeof(char));
 	if (!concat_string)
 		return (NULL);

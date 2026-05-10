@@ -6,7 +6,7 @@
 /*   By: pking <pking@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/02 18:42:01 by pking             #+#    #+#             */
-/*   Updated: 2026/02/06 19:22:19 by pking            ###   ########.fr       */
+/*   Updated: 2026/05/10 19:38:59 by pking            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,3 @@ int	ft_putpointer(void *p)
 	count += ft_putnbr_base((size_t)p, "0123456789abcdef");
 	return (count);
 }
-
